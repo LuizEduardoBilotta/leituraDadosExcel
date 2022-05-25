@@ -12,4 +12,9 @@ readXlsxFile('./files/dados.xlsx', { getSheets: true }).then(sheets => {
   console.log(sheets);
 });
 
-
+//Realizando leitura de dados de uma planilha específica
+readXlsxFile('./files/dados.xlsx', { sheet: 'Endereços' }).then(rows => {
+  for (const linha of rows) {
+    console.log(linha);
+  }
+});
